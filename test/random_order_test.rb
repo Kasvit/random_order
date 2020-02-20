@@ -12,7 +12,10 @@ class RandomOrder::Test < ActiveSupport::TestCase
     u4 = User.create(name: 'Sue')
     u5 = User.create(name: 'Max')
 
-    assert_equal User.find_random.size, 1
-    assert_equal User.find_many_random(2).size, 2
+    assert_equal User.find_random.is_a?(User), true
+    assert_equal User.random.is_a?(ActiveRecord::Relation), true
+    assert_equal User.find_many_random(10).is_a?(ActiveRecord::Relation), true
+
+    assert_equal User.find_many_random(2).count, 2
   end
 end
