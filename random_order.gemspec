@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["Vitalii Kasianchuk"]
   spec.email       = ["kasvit93@gmail.com"]
   spec.homepage    = "https://github.com/Kasvit/random_order"
-  spec.summary     = "Find random record in your models, just to DRY your code."
-  spec.description = "Find random record in your models, just to DRY your code."
+  spec.description = "With this gem you can return a random record from database using SQL or using `randomscope` to return records in random order"
+  spec.summary     = "This gem is adding three methods to ActiveRecord Relations - `random` , `find_random` and `find_many_random(...)`."
   spec.license     = "MIT"
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

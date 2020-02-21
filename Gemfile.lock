@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    random_order (0.1.1)
+    random_order (0.2.0)
       rails
 
 GEM

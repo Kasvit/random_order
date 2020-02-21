@@ -4,7 +4,7 @@ module RandomOrder
   class Railtie < ::Rails::Railtie
     include Extension
 
-    initializer 'RandomOrder.initialize' do
+     config.before_initialize do
       if RandomOrder.const_defined?("ActiveRecord")
         ActiveRecord::Base.send :extend, Extension
       end
